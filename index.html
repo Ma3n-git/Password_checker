@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Page title -->
+        <h1>Password Strength Checker</h1>
+        <!--
+            The page contains three main parts:
+            - A password input where the user types their password
+            - A strength indicator bar and a label
+            - A list of criteria that update live as the user types
+        -->
+        <div class="password-input">
+            <label for="password">Enter Password:</label>
+            <input type="password" id="password" placeholder="Type your password here">
+        </div>
+        <div class="strength-indicator">
+            <div class="strength-bar">
+                <div id="strength-fill" class="strength-fill"></div>
+            </div>
+            <div id="strength-text" class="strength-text">Password Strength: Weak</div>
+        </div>
+        <div class="criteria">
+            <h3>Password Requirements:</h3>
+            <ul>
+                <li id="length" class="invalid">At least 8 characters</li>
+                <li id="uppercase" class="invalid">At least one uppercase letter</li>
+                <li id="lowercase" class="invalid">At least one lowercase letter</li>
+                <li id="number" class="invalid">At least one number</li>
+                <li id="special" class="invalid">At least one special character</li>
+            </ul>
+        </div>
+    </div>
+    <!-- JavaScript controls live validation and updates the UI -->
+    <script src="functionality.js"></script>
+</body>
+</html>
